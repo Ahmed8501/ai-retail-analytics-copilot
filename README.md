@@ -1,4 +1,3 @@
-# ai-retail-analytics-copilot
 # AI Retail Analytics Copilot
 
 AI Retail Analytics Copilot is an AI-powered business intelligence application that allows users to explore retail and e-commerce data using plain English.
