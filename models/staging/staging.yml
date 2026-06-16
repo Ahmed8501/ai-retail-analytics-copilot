@@ -5,10 +5,41 @@ models:
     description: Cleaned customer records from the Olist dataset.
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - not_null
           - unique
 
       - name: customer_unique_id
-        tests:
+        data_tests:
           - not_null
+
+  - name: stg_orders
+    description: Cleaned order records from the Olist dataset.
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+      - name: order_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - delivered
+                  - shipped
+                  - canceled
+                  - unavailable
+                  - invoiced
+                  - processing
+                  - created
+                  - approved
