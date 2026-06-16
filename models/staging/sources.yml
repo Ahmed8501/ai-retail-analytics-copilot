@@ -21,10 +21,11 @@ sources:
         identifier: OLIST_ORDER_REVIEWS
 
       - name: products
-        identifier: OLIST_PRODUCTS
+        identifier: OLIST_ORDER_PRODUCTS
+
 
       - name: sellers
-        identifier: OLIST_SELLERS
+        identifier: OLIST_ORDER_SELLERS
 
       - name: category_translation
         identifier: PRODUCT_CATEGORY_NAME_TRANSLATION
